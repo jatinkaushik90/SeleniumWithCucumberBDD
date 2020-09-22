@@ -128,6 +128,9 @@
 						</execution>
 					</executions>
 					<configuration>
+					<systemPropertyVariables>
+						<BrowserType>${browser.name}</BrowserType>
+					</systemPropertyVariables>
 					<forkCount>4</forkCount> <!-- Specify number of parallel vms to launch -->
 					<reuseForks>false</reuseForks> <!-- will not reuse the exisiting vm but will lauch a new vm everytime -->
 					<testFailureIgnore>true</testFailureIgnore> <!-- continue with execution even on failure -->

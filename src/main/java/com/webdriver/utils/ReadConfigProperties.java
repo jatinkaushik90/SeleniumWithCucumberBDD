@@ -8,12 +8,12 @@ import java.util.Properties;
 public class ReadConfigProperties implements IReader {
 
 	private Properties properties;
-	
+
 	public ReadConfigProperties() {
 		initProperties("");
 	}
-	
-	public ReadConfigProperties(String fileName){
+
+	public ReadConfigProperties(String fileName) {
 		initProperties(fileName);
 	}
 
@@ -70,6 +70,14 @@ public class ReadConfigProperties implements IReader {
 	@Override
 	public int getExplicitWait() {
 		return Integer.parseInt(properties.getProperty("ExplicitWait"));
+	}
+
+	@Override
+	public void setBrowserType() {
+		String browserName = System.getProperty("BrowserType");
+		if (browserName == null || browserName.isEmpty())
+			browserName = "chrome";
+		properties.setProperty("BrowserName", browserName);
 	}
 
 }

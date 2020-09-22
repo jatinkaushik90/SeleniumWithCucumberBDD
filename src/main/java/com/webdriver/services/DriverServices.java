@@ -40,6 +40,7 @@ public class DriverServices {
 //		customChromeDriver = new CustomChromeDriver();
 //		driver = customChromeDriver.getChromeDriver();
 		reader = new ReadConfigProperties();
+		reader.setBrowserType();
 		driver = getBrowserDriver();
 		browserHelper = BrowserHelper.getInstance(driver);
 		alertHelper = AlertHelper.getInstance(driver);
