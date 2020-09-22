@@ -132,7 +132,7 @@
 					<reuseForks>false</reuseForks> <!-- will not reuse the exisiting vm but will lauch a new vm everytime -->
 					<testFailureIgnore>true</testFailureIgnore> <!-- continue with execution even on failure -->
 					<includes> <!-- specify the runner file names -->
-						<include>**/*genericRunner.java</include> <!-- This will include all runner files ending with Runner.java -->
+						<include>${runner.name}</include> <!-- This will include all runner files ending with Runner.java  runner.name value is provided via jenkins-->
 					</includes>
 						<suiteXmlFiles>
 							<!-- suiteXmlFile>src/main/java/testng.xml</suiteXmlFile>  used for running testnx.xml file-->
