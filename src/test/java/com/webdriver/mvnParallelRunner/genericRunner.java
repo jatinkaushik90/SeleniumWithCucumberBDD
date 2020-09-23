@@ -7,5 +7,5 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		"com.webdriver" }, dryRun = false, monochrome = true,plugin = { "pretty",
 		"json:target/report.json" }, tags = {"@ScenarioOutline"})
 public class genericRunner extends AbstractTestNGCucumberTests {
-
+	
 }
